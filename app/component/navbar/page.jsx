@@ -1,35 +1,23 @@
 import Link from "next/link";
 
-const navStyle = {
-  display: "flex",
-  justifyContent: "space-between",
-  alignItems: "center",
-  gap: "1.5rem",
-  padding: "1rem 1.5rem",
-  background: "#ffffff",
-  borderRadius: "16px",
-  boxShadow: "0 10px 30px rgba(0, 0, 0, 0.08)",
-};
-
-const linkStyle = {
-  textDecoration: "none",
-  color: "#111",
-  fontWeight: 600,
-  padding: "0.5rem 0.75rem",
-  borderRadius: "999px",
-};
-
 export default function Page() {
   return (
-    <nav style={navStyle}>
-      <Link href="/" style={{ ...linkStyle, fontSize: "1.1rem" }}>
+    <nav className="flex justify-between items-center gap-6 p-4 md:p-6 bg-white rounded-xl shadow-lg mx-auto">
+      <Link href="/" className="text-lg md:text-xl font-semibold text-gray-900">
         Home
       </Link>
-      <div style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
-        <Link href="/About" style={linkStyle}>
+
+      <div className="flex items-center gap-3">
+        <Link
+          href="/about"
+          className="text-gray-800 font-medium px-3 py-1 rounded-full hover:bg-gray-100"
+        >
           About
         </Link>
-        <Link href="/Contact" style={linkStyle}>
+        <Link
+          href="/contact"
+          className="text-gray-800 font-medium px-3 py-1 rounded-full hover:bg-gray-100"
+        >
           Contact
         </Link>
       </div>
