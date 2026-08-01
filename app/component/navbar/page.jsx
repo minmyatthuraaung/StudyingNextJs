@@ -9,13 +9,13 @@ export default function Page() {
 
       <div className="flex items-center gap-3">
         <Link
-          href="/about"
+          href="/About"
           className="text-gray-800 font-medium px-3 py-1 rounded-full hover:bg-gray-100"
         >
           About
         </Link>
         <Link
-          href="/contact"
+          href="/Contact"
           className="text-gray-800 font-medium px-3 py-1 rounded-full hover:bg-gray-100"
         >
           Contact
