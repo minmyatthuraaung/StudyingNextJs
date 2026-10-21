@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import db from "../../db/db.json";
 type Post = {
   id: number;
   title: string;
@@ -10,10 +11,7 @@ type Post = {
 };
 
 export default async function Page() {
-  const res = await fetch("http://localhost:3001/posts", {
-    next: { revalidate: 10 },
-  });
-  const posts = (await res.json()) as Post[];
+  const posts = db.posts as Post[];
 
   return (
     <main className="px-6 md:px-8 py-10 max-w-5xl mx-auto">
